@@ -1,3 +1,4 @@
+
 # Spelling Corrector Specification
 
 For this program we need a dictionary similar to Google’s. Our dictionary is generated using a large text file. The text file contains a large number of unsorted words. Every time your program runs it will create the dictionary from this text file. The dictionary will contain every word in the text file and a frequency for that word. Instead of storing a percent, your program need only store the number of times the word appears in the text file.
@@ -35,24 +36,40 @@ Using our example above, with only `kick` and `kicks` in the Trie it would have 
 ### Additional Required Methods
 
 Although not strictly required to make your Trie work as a dictionary to solve the spelling corrector problem, your Trie must implement the following three additional methods that are commonly implemented in general purpose Java classes: `toString()`, `hashCode()`, and `equals(Object)`.
+#### `toString()`
 
-The toString specification is as follows:
-For each word, in alphabetical order:
+For each word, `toString()` will return a string of all the words in the Trie in alphabetical order, with each word on a new line:
 
-```sh
-<word>\n
-…
+```
+cat\n
+bear\n
+dog\n
+snake\n
 ```
 
-This method must be recursive.
+**This method must be recursive.**
 
-Your `hashCode()` method should produce hashCode values that satisfy the general contract of hashCode (as specified in the Javadoc for the hashCode method of Object) and are reasonably unique. You can achieve this by taking the index of the first non null child node of the root and multiplying that index by the node count and word count of the Trie. The `hashCode()` function then returns this variable. **You should not use toString(), built-in `hashCode()` methods (e.g. that of a list) or similar methods inside your `hashCode()` method. Your `hashCode()` method’s logic should be written by you.**
+#### `hashCode()`
 
-The equals() method has to be thorough! You need to traverse both Tries fully and make sure they are the same. **You should not use toString(), similar string methods, or `hashCode()` to create your equals() method.**
+Your `hashCode()` method should produce hashCode values that satisfy the [general contract of hashCode](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#hashCode()) and are reasonably unique. For the purposes of this project, you can achieve this by taking the index of the first non-null child node of the root and multiplying that index by the node count and word count of the Trie.
 
-**Use of other data structures is not allowed in the trie or node classes.** For example, it is common to use a separate data structure, such as a Stack or Queue to traverse the nodes of a tree structure. This is not allowed in your Trie implementation. Equally you may not store chars within each individual node. Instead of relying on these other data structures, both the equals() and the toString() methods must be recursive. **The hashCode method should run in constant time.**
+You should not use any `toString()` (including your own) or any built-in `hashCode()` methods (e.g. that of a list). Your `hashCode()` method’s logic should be written by you.
 
-Your `Trie` class must implement the `ITrie` interface provided on the course website and your TrieNode must implement the INode interface.
+**This method must run in constant time**
+
+#### `equals()`
+
+The equals() method has to be thorough! You need to traverse both Tries fully and make sure they are the same.
+
+You should not use any `toString()` or `hashCode()`. 
+
+**This method must be recursive**
+
+## Additional notes 
+
+**Use of other data structures is not allowed in the `Trie` or `TrieNode` classes.** For example, it is common to use a separate data structure, such as a Stack or Queue to traverse the nodes of a tree structure. This is not allowed in your Trie implementation. Equally you may not store chars within each individual node.
+
+Your `Trie` class must implement the `ITrie` interface provided on the course website and your `TrieNode` must implement the `INode` interface.
 
 ## Spell Corrector Functionality
 
