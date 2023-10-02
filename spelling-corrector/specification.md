@@ -39,7 +39,8 @@ Using our example above, with only `kick` and `kicks` in the Trie it would have 
 ### Additional Required Methods
 
 Although not strictly required to make your Trie work as a dictionary to solve the spelling corrector problem, your Trie must implement the following three additional methods that are commonly implemented in general purpose Java classes: `toString()`, `hashCode()`, and `equals(Object)`.
-#### `toString()`
+
+#### toString()
 
 For each word, `toString()` will return a string of all the words in the Trie in alphabetical order, with each word on a new line:
 
@@ -49,7 +50,6 @@ bear\n
 dog\n
 snake\n
 ```
-
 **This method must be recursive.**
 
 ---
@@ -64,9 +64,9 @@ You should not use any `toString()` (including your own) or any built-in `hashCo
 ---
 #### equals()
 
-The equals() method has to be thorough! You need to traverse both Tries fully and make sure they are the same.
+The `equals()` method has to be thorough! You need to traverse both Tries fully and make sure they are the same.
 
-You should not use any `toString()` or `hashCode()`. 
+You are not allowed to make any call to `toString()` or `hashCode()`, whether built-in or your own. 
 
 **This method must be recursive**
 
