@@ -4,6 +4,8 @@
 - [Getting Started](getting-started.md)
 - [Starter Code](starter-code)
 
+- 🖥️ [Design Principles (Chess Examples)](https://docs.google.com/presentation/d/1dncxSAgnIqjV9RNzGR94EWVltJiCApqC3EvNPqz97-E/edit?usp=sharing)
+
 In this part of the Chess Project, you will create the base Chess Game behavior. To do this you will create the following 10 implementation classes that implement the provided interfaces: A Chess Game class, a Chess Board class, a Chess Position class, a Chess Move class, and 6 Chess Piece classes. In later assignments you will use this code to create a fully playable game.
 
 ## Code Class Structure
@@ -159,7 +161,7 @@ To pass off this assignment, meet with a TA and demonstrate that your code passe
 
 ### Grading Rubric
 
-| Category | Criteria | Points |
-| --- | --- | ---: |
-| Functionality | All pass off test cases succeed | 125 |
-| | Total | 125 |
+| Category      | Criteria                        | Points |
+| ------------- | ------------------------------- | -----: |
+| Functionality | All pass off test cases succeed |    125 |
+|               | Total                           |    125 |
