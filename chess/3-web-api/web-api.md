@@ -276,8 +276,6 @@ After you pass off your project with a TA, you should immediately submit your pr
 - In Intellij, navigate to the "Build" menu at the top of the screen and select "Clean Project" to remove auto-generated build files (if this option is not available, you can skip this step).
 - Create a ZIP file containing your whole project folder (not just the Java source files).
 - Submit your ZIP file on Canvas under the `Chess Web API` assignment.
-- To demonstrate that your test cases execute successfully, you should run your unit tests inside Intellij and take a screenshot of the successful test results displayed by Intellij. Please take one screenshot that shows the result of all of your tests passing. The tests used for the screenshot must be the same as the ones submitted in the Code Quality assignment ZIP file.
-- Submit your screenshot under the `Chess Web API` assignment on Canvas. The screenshot is submitted separately from your code ZIP file.
 
 ### Grading Rubric
 
